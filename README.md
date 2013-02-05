@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-Include `Webmachine::ActionView::Resource` in resources you want to use ActionView.
+Include `Webmachine::ActionView::Resource` in resources you want to use ActionView. Somewhere in your app's
+startup, you'll need to tell it where views live and (optionally) what handlers you're supporting, for example:
+
+    Webmachine::ActionView.configure do |config|
+      config.view_paths = [MY_VIEWS_PATH]
+      config.handlers = [:erb, :haml, :builder]
+    end
 
 ## Contributing
 

@@ -15,7 +15,7 @@ module Webmachine
     class Configuration #:nodoc:
       include ActiveSupport::Configurable
 
-      config_accessor :view_paths, :extensions
+      config_accessor :view_paths, :handlers
     end
   end
 end
