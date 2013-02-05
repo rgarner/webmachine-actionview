@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'webmachine-actionview/version'
+require 'webmachine/actionview/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "webmachine-actionview"
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "webmachine"
   gem.add_runtime_dependency "activesupport"
-  gem.add_runtime_dependency "actionview"
+  gem.add_runtime_dependency "actionpack"
 
   gem.files         = `git ls-files`.split($/)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
