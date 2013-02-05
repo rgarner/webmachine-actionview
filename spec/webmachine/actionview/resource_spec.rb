@@ -66,6 +66,7 @@ describe "A resource including Webmachine::ActionView::Resource" do
 
     it { should include('content from the application layout')}
     it { should include('content from shared/some_partial')}
+    it { should include('local content')}
   end
 
   describe "Explicit template rendering" do

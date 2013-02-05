@@ -1,4 +1,6 @@
 <p>home.html.erb content</p>
 <p>id: <%= @home.id %></p>
 <p>name: <%= @home.name %></p>
-<div class="from_a_partial"><%= render partial: 'shared/some_partial'  %></div>
+<div class="from_a_partial">
+  <%= render partial: 'shared/some_partial', locals: { local: Struct.new(:content).new(content: 'local content') }  %>
+</div>
