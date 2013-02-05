@@ -89,6 +89,12 @@ render partial: 'shared/my_partial'
 Partials are subject to the same conventions as Rails, i.e. their filenames begin with an underscore, but no underscore
 is required when making a call to `render partial: 'some_partial'`.
 
+## Thanks
+
+This gem came about a lot quicker due to someone else already having fiddled with the internals of ActionView.
+The link I originally found is https://github.com/newhavenrb/conferences/wiki/Using-Rails-without-Rails, so I think
+that means thanks to @drogus - pretty sure those are his slides linked to from that page.
+
 ## Contributing
 
 1. Fork it
