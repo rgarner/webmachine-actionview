@@ -61,7 +61,7 @@ Your resource itself is used as the view context. This means that you can use in
 For example:
 
 ```ruby
-class Customer << Webmachine::Resource
+class CustomerResource < Webmachine::Resource
   include Webmachine::ActionView::Resource
 
   def resource_exists?
