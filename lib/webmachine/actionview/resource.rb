@@ -9,8 +9,6 @@ module Webmachine
         end
       end
 
-      DEFAULT_LAYOUT = 'layouts/application'
-
       # Renders a template or partial with an optional layout from a `Webmachine::ActionView::Resource`
       #
       # @param [Hash] options Describe what you want to render. Leave blank to render the {#default_template_name}
@@ -29,7 +27,7 @@ module Webmachine
           if options.has_key?(:layout) && !options[:layout]
             options.delete(:layout)
           else
-            options.reverse_merge!(layout: DEFAULT_LAYOUT)
+            options.reverse_merge!(layout: Webmachine::ActionView.config.default_layout)
           end
           _prepare_context
         end

@@ -9,6 +9,7 @@ describe Webmachine::ActionView::Configuration do
       Webmachine::ActionView.configure do |c|
         c.view_paths = paths
         c.handlers = handlers
+        c.default_layout = 'layouts/some_default'
       end
     end
 
@@ -16,5 +17,6 @@ describe Webmachine::ActionView::Configuration do
 
     its(:view_paths) { should eql(paths) }
     its(:handlers) { should eql(handlers) }
+    its(:default_layout) { should eql('layouts/some_default') }
   end
 end

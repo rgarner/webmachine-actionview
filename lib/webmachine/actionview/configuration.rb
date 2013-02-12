@@ -22,7 +22,13 @@ module Webmachine
     class Configuration #:nodoc:
       include ActiveSupport::Configurable
 
-      config_accessor :view_paths, :handlers
+      DEFAULT_LAYOUT = 'layouts/application'
+
+      config_accessor :view_paths, :handlers, :default_layout
+    end
+
+    configure do |c|
+      c.default_layout = Configuration::DEFAULT_LAYOUT
     end
   end
 end

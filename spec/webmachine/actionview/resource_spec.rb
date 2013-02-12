@@ -14,9 +14,10 @@ describe "A resource including Webmachine::ActionView::Resource" do
   let(:resource)                { HomeResource.new(request, response) }
   let(:unconventional_resource) { UnconventionalName.new(request, response) }
 
-  before :all do
+  before do
     Webmachine::ActionView.configure do |c|
       c.view_paths = ['spec/dummy/views']
+      c.default_layout = 'layouts/application'
     end
   end
 
