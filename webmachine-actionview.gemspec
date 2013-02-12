@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/rgarner/webmachine-actionview"
 
   gem.add_development_dependency "rspec"
+  gem.add_development_dependency "yard"
   gem.add_development_dependency "webmachine-test"
 
   gem.add_runtime_dependency "webmachine"
