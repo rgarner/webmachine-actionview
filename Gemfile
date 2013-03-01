@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in webmachine-actionview.gemspec
+group :development, :test do
+  gem "rspec"
+  gem "yard"
+  gem "webmachine-test"
+end
+
 gemspec
