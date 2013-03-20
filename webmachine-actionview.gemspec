@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Russell Garner"]
   gem.email         = ["rgarner@zephyros-systems.co.uk"]
   gem.description   = %q{Brings ActionView to webmachine-ruby}
-  gem.summary       = %q{Want the Rails conventions that you're used to for HTML views in webmachine-ruby? This is your gem.}
+  gem.summary       = %q{Want the Rails conventions that you are used to for HTML views in webmachine-ruby? This is your gem.}
   gem.homepage      = "http://github.com/rgarner/webmachine-actionview"
 
   gem.add_dependency "webmachine", '~> 1.0'
