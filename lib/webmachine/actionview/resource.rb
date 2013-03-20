@@ -49,6 +49,7 @@ module Webmachine
       end
 
       # The `::ActionView::Context` in which views are looked up.
+      # @return [::ActionView::Context]
       def lookup_context
         @lookup_context ||= ::ActionView::LookupContext.new(view_paths)
       end
