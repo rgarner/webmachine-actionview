@@ -16,6 +16,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency "activesupport", '~> 3.2'
   gem.add_dependency "actionpack", '~> 3.2'
 
+  gem.add_development_dependency "bundler", '~> 1.11'
+
   gem.files         = `git ls-files`.split($/)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
