@@ -1,4 +1,4 @@
-# Webmachine::Actionview
+# Webmachine::Actionview [![Build Status](https://travis-ci.org/rgarner/webmachine-actionview.svg?branch=master)](https://travis-ci.org/rgarner/webmachine-actionview)
 
 Integration of some Rails-style view conventions into Webmachine.  Uses your resource as a view context.
 
