@@ -1,4 +1,7 @@
 require 'action_view'
+require 'active_support/core_ext/hash'
+require 'active_support/core_ext/string'
+require 'action_dispatch/http/mime_type'
 require 'webmachine/actionview/version'
 require 'webmachine/actionview/configuration'
 require 'webmachine/actionview/resource'
