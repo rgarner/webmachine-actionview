@@ -12,11 +12,11 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Want the Rails conventions that you're used to for HTML views in webmachine-ruby? This is your gem.}
   gem.homepage      = "http://github.com/rgarner/webmachine-actionview"
 
-  gem.add_dependency "webmachine", '~> 1.0'
-  gem.add_dependency "activesupport", '~> 3.2'
-  gem.add_dependency "actionpack", '~> 3.2'
+  gem.add_dependency "webmachine", '>= 1.0'
+  gem.add_dependency "activesupport", '>= 3.2', '< 5.0'
+  gem.add_dependency "actionpack", '>= 3.2', '< 5.0'
 
-  gem.add_development_dependency "bundler", '~> 1.11'
+  gem.add_development_dependency "bundler"
 
   gem.files         = `git ls-files`.split($/)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
