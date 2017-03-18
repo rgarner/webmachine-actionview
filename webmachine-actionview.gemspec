@@ -13,8 +13,8 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/rgarner/webmachine-actionview"
 
   gem.add_dependency "webmachine", '>= 1.0'
-  gem.add_dependency "activesupport", '>= 3.2', '< 5.0'
-  gem.add_dependency "actionpack", '>= 3.2', '< 5.0'
+  gem.add_dependency "activesupport", '>= 3.2', '~> 5.0'
+  gem.add_dependency "actionpack", '>= 3.2', '~> 5.0'
 
   gem.add_development_dependency "bundler"
 
