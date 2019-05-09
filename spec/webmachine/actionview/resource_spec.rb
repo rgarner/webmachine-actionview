@@ -27,18 +27,18 @@ describe "A resource including Webmachine::ActionView::Resource" do
 
       it { should be_an(ActionView::PathSet) }
       it "has the path we previously configured" do
-        view_paths.paths.map(&:to_s).should include(File.expand_path('spec/dummy/views'))
+        expect(view_paths.paths.map(&:to_s)).to include(File.expand_path('spec/dummy/views'))
       end
     end
 
     context "A conventionally-named resource" do
       it "looks for a template without resource in the class name" do
-        resource.default_template_name.should == 'home'
+        expect(resource.default_template_name).to eql('home')
       end
     end
     context "An unconventionally-named resource" do
       it "looks for a template as an underscored version of its class name" do
-        unconventional_resource.default_template_name.should == 'unconventional_name'
+        expect(unconventional_resource.default_template_name).to eql('unconventional_name')
       end
     end
   end
@@ -49,25 +49,25 @@ describe "A resource including Webmachine::ActionView::Resource" do
     it { should be_an(ActionView::LookupContext) }
 
     it "finds templates implicitly" do
-      lookup_context.find('home').should be_a(ActionView::Template)
+      expect(lookup_context.find('home')).to be_a(ActionView::Template)
     end
     it "finds templates implicitly when html is mentioned" do
-      lookup_context.find('home.html').should be_a(ActionView::Template)
+      expect(lookup_context.find('home.html')).to be_a(ActionView::Template)
     end
     it "fails to find templates for unmentioned extensions" do
-      lambda { resource.lookup_context.find('foo') }.should raise_error(ActionView::MissingTemplate)
+      expect { resource.lookup_context.find('foo') }.to raise_error(ActionView::MissingTemplate)
     end
   end
 
   describe "Rendering from a template with a context" do
     subject(:rendered) { resource.to_html }
 
-    it { should include('id: 1') }
-    it { should include('name: some name') }
+    it { is_expected.to include('id: 1') }
+    it { is_expected.to include('name: some name') }
 
-    it { should include('content from the application layout')}
-    it { should include('content from shared/some_partial')}
-    it { should include('local content')}
+    it { is_expected.to include('content from the application layout')}
+    it { is_expected.to include('content from shared/some_partial')}
+    it { is_expected.to include('local content')}
   end
 
   describe "Explicit template rendering" do
@@ -84,7 +84,7 @@ describe "A resource including Webmachine::ActionView::Resource" do
       end
 
       it "should include explicit content" do
-        rendered.should include('FUSKING CLOFF PRUNKER')
+        expect(rendered).to include('FUSKING CLOFF PRUNKER')
       end
     end
     context "Suppressing default layout" do
@@ -98,7 +98,7 @@ describe "A resource including Webmachine::ActionView::Resource" do
       end
 
       it "should not include explicit content" do
-        rendered.should_not include('FUSKING CLOFF PRUNKER')
+        expect(rendered).not_to include('FUSKING CLOFF PRUNKER')
       end
     end
   end

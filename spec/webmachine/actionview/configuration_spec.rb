@@ -15,8 +15,8 @@ describe Webmachine::ActionView::Configuration do
 
     subject(:config) { Webmachine::ActionView.config }
 
-    its(:view_paths) { should eql(paths) }
-    its(:handlers) { should eql(handlers) }
-    its(:default_layout) { should eql('layouts/some_default') }
+    example { expect(config.view_paths).to eql(paths) }
+    example { expect(config.handlers).to eql(handlers) }
+    example { expect(config.default_layout).to eql('layouts/some_default') }
   end
 end
